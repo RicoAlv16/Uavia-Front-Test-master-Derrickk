@@ -1,0 +1,13 @@
+
+<!--Loader-->
+<div class="loader-container">
+  <i class="spinner-border text-primary"></i>
+</div>
+
+<ul class="list-group">
+
+  <li class="list-group-item" *ngFor="let user of this.users$|async">
+    {{user.name}}
+  </li>
+
+</ul>

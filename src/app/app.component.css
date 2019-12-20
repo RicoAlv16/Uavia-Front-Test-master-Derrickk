@@ -1,0 +1,10 @@
+
+#content {
+    display: flex;
+    padding-top: 25px;
+    justify-content: center;
+}
+
+.alert div:not(.active) {
+    display: none;
+}

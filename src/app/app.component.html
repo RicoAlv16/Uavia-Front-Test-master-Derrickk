@@ -1,0 +1,63 @@
+<!--Navigation-->
+<nav class="nav nav-pills nav-justified" style="margin: 15px">
+    <a class="nav-link" routerLink="/exercise/1" routerLinkActive="active">Exercise 1</a>
+    <a class="nav-link" routerLink="/exercise/2" routerLinkActive="active">Exercise 2</a>
+    <a class="nav-link" routerLink="/exercise/3" routerLinkActive="active">Exercise 3 (bonus)</a>
+    <a class="nav-link" routerLink="/exercise/4" routerLinkActive="active">Exercise 4 (bonus)</a>
+</nav>
+
+<!--Content-->
+<div id="content">
+    <router-outlet></router-outlet>
+</div>
+
+<!--Instructions-->
+<div class="alert alert-secondary" style="margin: 80px 15px 15px">
+
+    <div routerLink="/exercise/1" routerLinkActive="active">
+        <b>Exercise 1 : Bindings</b><br/>
+        Modifiez le composant "users-search" de manière à ce que le champ "search" permette de filtrer
+        la liste des utilisateurs.<br/><br/>
+        <img src="/assets/exercise1-0.png" style="height: 270px" alt="Example 1">
+        <img src="/assets/exercise1-1.png" style="height: 150px; vertical-align: top" alt="Example 1">
+    </div>
+
+    <div routerLink="/exercise/2" routerLinkActive="active">
+        <b>Exercise 2 : Services et observables</b><br/>
+        Modifiez le composant "exercise-two" de manière à ce que la liste des utilisateurs soit chargée grâce à
+        la méthode "requestUsers" du service "user.service" (sans modifier le service). Le loader doit disparaitre
+        une fois la liste chargée.<br/><br/>
+        <img src="/assets/exercise2-0.png" style="height: 90px; vertical-align: top" alt="Example 2">
+        <img src="/assets/exercise2-1.png" style="height: 270px" alt="Example 2">
+    </div>
+
+    <div routerLink="/exercise/3" routerLinkActive="active">
+        <b>Exercise 3 : Architecture</b><br/>
+        Modifiez le composant "exercise-three" de manière à obtenir le résultat suivant :<br/><br/>
+        <img src="/assets/exercise3-0.png" style="height: 200px" alt="Example 3">
+        <img src="/assets/exercise3-1.png" style="height: 200px; margin: 0 15px" alt="Example 3">
+        <img src="/assets/exercise3-2.png" style="height: 200px" alt="Example 3">
+        <br/>
+        <br/>
+        Pour cela créez une architecture de composants de manière à ce que le composant "exercise-three" ait pour rôle de faire les requêtes vers le service "book.service".
+        <br/>Les autres composants auront la charge de la partie présentationnel de l'interface.
+
+        <br/>
+        <br/>
+        Pour la partie graphique utilisez les éléments <a href="https://getbootstrap.com/docs/4.2/components/list-group/#links-and-buttons">list group</a> et
+        <a href="https://getbootstrap.com/docs/4.2/components/card/#titles-text-and-links">card</a> de bootstrap.
+    </div>
+
+    <div routerLink="/exercise/4" routerLinkActive="active">
+        <b>Exercise 4 : Pipe RxJs et mapping de données</b><br/>
+        Cet exercice vise à simuler un enchainement de requêtes via un pipe RxJs.<br/>
+        Modifiez le composant "exercise-four" de manière à ce que : <br/>
+        1) La liste des ids des utilisateurs soit chargée grâce à la méthode "requestUserIds" du service "user.service".<br/>
+        2) Grâce à un pipe RxJS faire un appel à la méthode "requestUsersByIds" pour obtenir les utilisateurs grâce aux ids de la requête précédente.<br/>
+        3) Dans le pipe RxJS ajouter une étape de tri des utilisateurs par ordre alphabétique.<br/>
+        4) Le loader doit disparaitre une fois la liste chargée.<br/><br/>
+        <img src="/assets/exercise4-0.png" style="height: 50px; vertical-align: top" alt="Example 4">
+        <img src="/assets/exercise4-1.png" style="height: 270px" alt="Example 4">
+    </div>
+
+</div>
